@@ -1,0 +1,146 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+ul,
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0 10px !important;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 38px;
+}
+p {
+  font-size: 26px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+img {
+  object-fit: cover;
+}
+.alignright {
+  text-align: right;
+}
+.blkPadding {
+  padding: 100px;
+}
+
+.wrapperBlk {
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-gap: 30px;
+  h1 {
+    font-size: 60px;
+    margin: 0 0 30px;
+    word-break: break-all;
+  }
+}
+.leftBlk,
+.rightBlk {
+  padding: 100px;
+  box-sizing: border-box;
+}
+.leftBlk {
+  margin-top: auto;
+}
+.rightBlk {
+  padding: 100px 0 100px 100px;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  img {
+    // max-width: 100%;
+    // max-height: 100%;
+    object-fit: scale-down;
+    border-radius: 25px 0 0 25px;
+  }
+  .column {
+    margin-top: 100px;
+    .item {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        padding-top: 100px;
+      }
+    }
+  }
+}
+.button {
+  font-size: 20px;
+  background-image: linear-gradient(327deg, #39c7af 0%, #1acce4 128%, #39c7af 100%);
+  color: #fff;
+  border: 1px solid #32bbb4;
+  padding: 20px 30px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.circle {
+  background: #39c7af;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 5px;
+  .fa,
+  .fas,
+  .fab {
+    margin-top: 6px;
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapperBlk {
+    grid-template-columns: 100%;
+  }
+  img {
+    border-radius: 30px !important;
+  }
+  .leftBlk,
+  .rightBlk,
+  .blkPadding {
+    padding: 8%;
+  }
+  .rightBlk {
+    padding: 8% 0 8% 8%;
+  }
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

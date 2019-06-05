@@ -1,0 +1,115 @@
+.menuBlk {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  input {
+    display: none;
+  }
+
+  ul {
+    text-align: right;
+  }
+  li {
+    display: inline-block;
+    font-size: 20px;
+  }
+  a {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 10px 30px;
+    &:hover,
+    &.active {
+      border-top: 2px solid greenyellow;
+      padding-top: 8px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .menuBlk {
+    display: block;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+    }
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+
+      background: #cdcdcd;
+      border-radius: 3px;
+
+      z-index: 1;
+
+      transform-origin: 4px 0px;
+
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.55s ease;
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+  .menuBlk input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  .menuBlk input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .menuBlk input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    box-sizing: border-box;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    display: block;
+
+    a {
+      color: #333;
+    }
+  }
+  .menuBlk input:checked ~ ul {
+    transform: none;
+  }
+}

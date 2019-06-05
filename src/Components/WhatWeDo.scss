@@ -1,0 +1,92 @@
+.column {
+  column-width: 320px;
+  column-count: 2;
+  column-gap: 30px;
+  .item {
+    width: 100%;
+    margin: 0 0 30px;
+    height: 500px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: none;
+      border-radius: 30px;
+    }
+    &:first-child {
+      margin-top: 100px;
+    }
+  }
+}
+.fa-quote-left {
+  color: green;
+  font-size: 18px;
+  vertical-align: top;
+  &.rotate {
+    transform: rotate(180deg);
+  }
+}
+.WhatBlk {
+  .leftBlk {
+    padding: 100px 100px 100px 0;
+  }
+  .rightBlk {
+    .columm {
+      img {
+        object-fit: unset;
+      }
+    }
+  }
+  h1.blkPadding {
+    width: 60%;
+    + div img {
+      width: 80%;
+      border-radius: 0 30px 30px 0;
+    }
+  }
+  .alignright {
+    img {
+      display: inline-block;
+      width: 600px;
+      height: 700px;
+      margin: 30px;
+      border-radius: 30px;
+      &:last-child {
+        margin-right: 0;
+        width: 900px;
+        border-radius: 30px 0 0 30px;
+      }
+    }
+  }
+  .challengeBlk {
+    .leftBlk {
+      padding: 100px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .WhatBlk {
+    padding: 8%;
+    box-sizing: border-box;
+    .challengeBlk {
+      .leftBlk {
+        padding: 0;
+      }
+    }
+  }
+  .WhatBlk .leftBlk {
+    padding: 8px;
+  }
+  .WhatBlk .alignright img:last-child,
+  .WhatBlk h1.blkPadding + div img,
+  .WhatBlk .alignright img {
+    width: 100%;
+  }
+  .WhatBlk h1.blkPadding {
+    width: 100%;
+    padding: 8%;
+    box-sizing: border-box;
+  }
+  .WhatBlk .alignright img {
+    margin: 30px 0;
+  }
+}

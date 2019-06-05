@@ -1,0 +1,87 @@
+.bnrImg {
+  background: url("/assets/siteBg.jpg") no-repeat;
+  height: 120vh;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.bnrInnerBlk {
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  display: table;
+  margin: -100px auto 100px;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+}
+.container {
+  width: 65%;
+  margin: auto;
+  .innerContainer {
+    margin: 0 50px;
+  }
+  ul li {
+    display: inline-block;
+    color: green;
+    font-size: 20px;
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      background: green;
+      margin: 0 10px 0 20px;
+    }
+  }
+}
+#WhoWeAre {
+  .imageWrapper {
+    width: 100%;
+    height: 700px;
+    overflow: inherit;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+    }
+  }
+  .rightBlk {
+    padding: 100px;
+  }
+  .sndBlk {
+    img {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .bnrImg {
+    background-size: 100% 100%;
+  }
+  .bnrInnerBlk {
+    height: 400px;
+    img {
+      object-fit: fill;
+    }
+  }
+  #WhoWeAre .rightBlk {
+    padding: 8%;
+  }
+  .container {
+    width: 99%;
+    padding: 8%;
+    box-sizing: border-box;
+    .innerContainer {
+      margin: auto;
+    }
+  }
+}
